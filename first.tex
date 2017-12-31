@@ -1,0 +1,48 @@
+%kelompok 4 D4 TI-2D
+%Ayu Permata Sari        1154022
+%Librantara Erlangga     1154071
+%Martin Luter Zega       1154120
+%Putri Aulia Ramadhanie  1154096
+%Ryan Hafizh Herdiana    1154067
+%Copyright (c) 2017 Copyright Holder All Rights Reserved.
+
+\section{Pyshp}
+------
+
+\subsection{basic usage}
+berikut ini adalah basic penggunaan module pyshp di python
+
+Membuat file pada pyshp
+  \begin{verbatim}
+  import shapefile
+  a = shapefile.Writer(shapeType=1)
+  a.field('nama','C','40')
+  a.field('alamat','C','255')
+  a.save('namafile.shp')
+  \end{verbatim}
+
+Mengedit atau Menambah record
+\begin{verbatim}
+  import shapefile
+  a = shapefile.Editor(shapefile='namafile.shp')
+  a.record('politeknis pos','jl.sarijadi')
+  a.point(-6.8731953,107,5737873,0,0)
+  a.save('namafile')
+\end{verbatim}
+
+Menghapus record
+\begin{verbatim}
+  import shapefile
+  a = shapefile.Editor('namafile.shp')
+  a.shape(0) //masukan data ke berapa //karena array jadi dimulai dari 0
+  a.delete(0)
+  a.save('namafile')
+\end{verbatim}
+
+Membaca record
+\begin{verbatim}
+  import shapefile
+  a = shapefile.Reader('namafile.shp')
+  a.records() //menampilkan semua record
+  a.record(0) //spesifik record
+\end{verbatim}
