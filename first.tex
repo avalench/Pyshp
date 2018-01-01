@@ -51,3 +51,13 @@ Membaca record
   a.records() //menampilkan semua record
   a.record(0) //spesifik record
 \end{verbatim}
+
+\subsection
+Cara Menghitung jumlah record dari File .shp menggunakan python
+Install Python terlebih dahulu
+Install PIP di python
+Buka cmd lalu ketik: Python –m pip install pyshp ,lalu enter
+Kemudian upgrade pip dengan mengetikkan di cmd: Python –m pip install - -upgrade pip ,lalu enter
+Lalu masuk ke python
+Ketikkan script berikut: import shapefile ,klik enter f = shapefile.Reader("lokasi file .shp") ,klik enter shapes = f.shapes() ,klik enter print len (shapes)
+Lalu klik enter,maka akan keluar hasil nya,disini kita menghitung jumlah record yang ada di dalam file .shp Membuka file shapefile juga dapat kita lakukan dengan membuat file .py(python),dimana didalam file .py berisikan script untuk membuka file .shp sama seperti script di atas. Penutup: Kesimpulan: Dengan script diatas kita dapat mengetahui jumlah record yang ada pada file shp yang kita buka Saran: Sebaiknya langsung dipraktekkan dan dipahami ,atau bisa dibandingkan dengan membuka file shp tersebut menggunakan QGIS.
