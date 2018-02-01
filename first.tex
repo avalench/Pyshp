@@ -24,6 +24,12 @@ Metode yang saya lakukan diatas adalah menghitung jumlah shape yang tersedia did
 Shapefiles awalnya dikembangkan oleh Environmental Systems Research Institute (ESRI, 1998)\ref{esri} dan merupakan format data geospasial untuk perangkat lunak sistem informasi geografis (SIG), seperti ESRI ArcGIS dan Quantum GIS.
 Format shapefile spasial menggambarkan geometri sebagai fitur 'titik', 'polyline', atau 'poligon' (OpenStreetMap, 2013) \cite{halchuk2014fifth}.
 
+Shapefile adalah pengelompokan beberapa file untuk mewakili aspek geodata yang berbeda (OpenStreetMap, 2013):
+.shp: bentuk format; geometri fitur itu sendiri.
+.shx: bentuk format indeks; indeks posisi geometri fitur untuk memungkinkan pencarian cepat.
+.dbf: format atribut; atribut columnar untuk setiap bentuk, dalam format dBase IV.
+Atribut fitur dapat diperiksa di perangkat lunak SIG, atau dengan membuka berkas .dbf di Microsoft Excel, misalnya. Ada juga beberapa file pilihan dalam format shapefile. Yang paling penting adalah file .prj yang menggambarkan sistem koordinat dan informasi proyeksi yang digunakan. Shapefiles yang dihasilkan untuk model bahaya NBCC2015 ditentukan dengan proyeksi WGS84
+
 \subsection{basic usage}
 berikut ini adalah basic penggunaan module pyshp di python
 
